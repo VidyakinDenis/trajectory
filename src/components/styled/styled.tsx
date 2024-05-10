@@ -15,8 +15,6 @@ export const StyledCard = styled.div<{ deleted: boolean }>`
 
 export const CardButton = styled.div`
   padding-top: 7px;
-  //justify-content: center;
-  //text-align: center;
   margin: auto 0 auto 20px;
   height: 40px;
   width: 40px;
@@ -40,8 +38,8 @@ export const BtnBlock = styled.div`
   display: flex;
   margin-right: 50px;
 `
-export const PopUp  = styled.div <{ popUp: boolean }>`
-  display: ${props => props.popUp ? "fixed" : 'none'};
+export const PopUp  = styled.div<{ popup: boolean }>`
+  display: ${props => props.popup ? "fixed" : 'none'};
   position: fixed;
   left: 0;
   top: 0;
@@ -70,11 +68,11 @@ export const PopUpInput = styled.input`
   margin: 10px auto;
   border-radius: 8px;
   height: 30px;
-  :focus-visible{
-    outline: 0;
-    outline-offset: 0;
-    border: none;
-  }
+      :focus-visible{
+        outline: 0;
+        outline-offset: 0;
+        border: none;
+      }
 `
 
 export const PopUpSubmit = styled.button`
@@ -94,7 +92,6 @@ export const StyledHeader = styled.div`
   flex-direction: column;
   display: flex;
   padding: 0;
-  //margin-bottom: 20px;
   background-color: #3049ec;
   width: 100%;
   color: white;

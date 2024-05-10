@@ -2,14 +2,13 @@ import {Map, CardPage} from "../../pages";
 import {useEffect, useState} from "react";
 import {Routes, Route} from "react-router-dom";
 import {Loading} from "../../components/styled/styled";
+import {Car} from "../../components/types";
 
 export const App = () => {
 
-    const [Cars, setCars] = useState<any>( null)
+    const [Cars, setCars] = useState<Car[] | null>( null)
 
-    console.log(Cars)
     useEffect(() => {
-        console.log("pis'ka")
         fetch('https://test.tspb.su/test-task/vehicles')
             .then(data => data.json())
             .then(data => {

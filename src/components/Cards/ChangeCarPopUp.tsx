@@ -5,9 +5,9 @@ import {useForm,SubmitHandler} from "react-hook-form";
 
 
 interface IChangeCagePopUp {
-    popUp: boolean,
+    popup: boolean,
     setPopUp: (popUp: boolean) => void
-    setVisibleCar: (visibleCar: any) => void
+    setVisibleCar: React.Dispatch<React.SetStateAction<Car>>
     car: Car
 }
 
@@ -18,7 +18,7 @@ interface IPopUpForm {
 }
 
 
-export const ChangeCarPopUp = ({popUp, setPopUp, car, setVisibleCar}: IChangeCagePopUp) => {
+export const ChangeCarPopUp = ({popup, setPopUp, car, setVisibleCar}: IChangeCagePopUp) => {
 
     const {register, handleSubmit} = useForm<IPopUpForm>({
         defaultValues:{
@@ -27,6 +27,7 @@ export const ChangeCarPopUp = ({popUp, setPopUp, car, setVisibleCar}: IChangeCag
             price: car.price,
         }
     })
+
 
     const submit: SubmitHandler<IPopUpForm> = (data) => {
         setPopUp(false)
@@ -43,7 +44,7 @@ export const ChangeCarPopUp = ({popUp, setPopUp, car, setVisibleCar}: IChangeCag
     }
 
     return (
-        <S.PopUp popUp={popUp} onClick={() => {setPopUp(false)}} >
+        <S.PopUp popup={popup} onClick={() => {setPopUp(false)}} >
             <S.PopUpForm  onSubmit={handleSubmit(submit)} onClick={e => {e.stopPropagation()}}>
                 <S.PopUpName>Изменение параметров</S.PopUpName>
                 <S.PopUpInput {...register('name')} type='text' />
