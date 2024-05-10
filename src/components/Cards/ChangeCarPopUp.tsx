@@ -17,7 +17,6 @@ interface IPopUpForm {
     price: number,
 }
 
-
 export const ChangeCarPopUp = ({popup, setPopUp, car, setVisibleCar}: IChangeCagePopUp) => {
 
     const {register, handleSubmit} = useForm<IPopUpForm>({
@@ -27,7 +26,6 @@ export const ChangeCarPopUp = ({popup, setPopUp, car, setVisibleCar}: IChangeCag
             price: car.price,
         }
     })
-
 
     const submit: SubmitHandler<IPopUpForm> = (data) => {
         setPopUp(false)

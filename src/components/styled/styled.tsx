@@ -38,6 +38,7 @@ export const BtnBlock = styled.div`
   display: flex;
   margin-right: 50px;
 `
+
 export const PopUp  = styled.div<{ popup: boolean }>`
   display: ${props => props.popup ? "fixed" : 'none'};
   position: fixed;
@@ -49,6 +50,7 @@ export const PopUp  = styled.div<{ popup: boolean }>`
   background-color: rgba(0,0,0,0.4);
 
 `
+
 export const PopUpForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -121,12 +123,14 @@ export const RouteButtons = styled.div`
   display: flex;
   justify-content: space-around;
 `
+
 export const Loading = styled.div`
   color: #000;
   font-size:56px;
   text-align: center;
   margin-top: 10%;
 `
+
 export const CardForm = styled.form`
   display: flex;
   justify-content: center;
@@ -139,6 +143,7 @@ export const SelectFilter = styled.select`
     height: 30px;
     width: 200px;
 `
+
 export const SubmitFilter = styled.button`
   border-radius: 8px;
   border: 1px solid #3049ec ;

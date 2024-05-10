@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
-import {Header} from "../../components";
-import {CarCards} from "../../components";
+import {Header, CarCards} from "../../components";
 import * as S from "../styled/styled"
 import {ICars} from "../../components/types";
 
